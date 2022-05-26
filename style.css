@@ -21,8 +21,7 @@ body {
     margin: auto;
 }
 
-#league,
-select {
+#league {
     margin-bottom: 20px;
 }
 
@@ -31,8 +30,56 @@ input {
     border: 0;
     outline: 0;
     padding: 10px;
+    margin-bottom: 20px;
     width: 100%;
     border-radius: 5px;
     box-shadow: 1px 3px 4px 4px rgba(8, 70, 241, 0.3);
+}
+
+#btn {
+    border: 0;
+    outline: 0;
+    padding: 10px;
+    background-color: #2119e9;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 3px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+#btn:focus {
+    transform: scale(.97);
+}
+
+#standings-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    box-shadow: 1px 3px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+thead tr {
+    background-color: #2119e9;
+    color: #fff;
+}
+
+tr th:first-child {
+    text-align: left;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(157, 158, 158);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(213, 214, 214);
 }
 
