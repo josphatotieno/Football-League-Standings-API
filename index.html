@@ -14,48 +14,56 @@
         </div>
     </header>
 
-    <div id="form-wrapper">
-        <form action="">
-            <div id="league">
-                <select name="league" id="select-league">
-                    <option value="" disabled selected hidden>Select league</option>
-                    <option value="EPL" id="eng.1">EPL</option>
-                    <option value="Bundesliga" id="ger.1">Bundesliga</option>
-                    <option value="La Liga" id="esp.1">La Liga</option>
-                    <option value="Serie A" id="ita.1">Serie A</option>
-                    <option value="Ligue 1" id="fra.1">Ligue 1</option>
-                </select>  
+
+        <div id="form-wrapper">
+            <div id="error-message">
+                <p>Please select league and enter season</p>
             </div>
-
-            <div id="">
-                <input type="number" name="" id="season" placeholder="Enter season">
+            <form action="">
+                <div id="league">
+                    <select name="league" id="select-league">
+                        <option value="" disabled selected hidden>Select league</option>
+                        <option value="EPL" id="eng.1">EPL</option>
+                        <option value="Bundesliga" id="ger.1">Bundesliga</option>
+                        <option value="La Liga" id="esp.1">La Liga</option>
+                        <option value="Serie A" id="ita.1">Serie A</option>
+                        <option value="Ligue 1" id="fra.1">Ligue 1</option>
+                    </select>  
+                </div>
+    
+                <div id="">
+                    <input type="number" name="" id="season" placeholder="Enter season e.g for 2020/2021 enter 2020">
+                </div>
+    
+                <button id="btn">Get Standings</button>
+            </form>
+        </div>
+    
+        <section id="standings">
+            <div id="standings-wrapper">
+                <div id="standings-title">
+                    
+                </div>
+    
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Team</th>
+                            <th>P</th>
+                            <th>W</th>
+                            <th>D</th>
+                            <th>L</th>
+                            <th>GD</th>
+                            <th>PTS</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody>
+                        
+                    </tbody>
+                </table>
             </div>
-
-            <button id="btn">Get Standings</button>
-        </form>
-    </div>
-
-    <div id="standings-wrapper">
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Team</th>
-                    <th>P</th>
-                    <th>W</th>
-                    <th>D</th>
-                    <th>L</th>
-                    <th>GD</th>
-                    <th>PTS</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                
-            </tbody>
-        </table>
-
-    </div>
+        </section>
 <script src="main.js"></script>
 </body>
 </html>

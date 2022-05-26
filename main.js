@@ -1,24 +1,34 @@
 const selectLeague = document.querySelector('#select-league');
 const season = document.querySelector('#season');
-const btn = document.querySelector('#btn')
+const btn = document.querySelector('#btn');
+const errorMessage = document.querySelector('#error-message');
 
 btn.addEventListener('click', getStandings);
 
 async function getStandings(e) {
     e.preventDefault();
-    document.querySelector('tbody').innerHTML = ''
-    const leagueID = selectLeague.selectedOptions[0].getAttribute('id');
+    document.querySelector('tbody').innerHTML = '';
 
-    const standingsResponse = await fetch(`https://api-football-standings.azharimm.site/leagues/${leagueID}/standings?season=${+season.value}&sort=asc`);
-    
+    if(selectLeague.value !== '' && season.value !== '') {
+        const leagueID = selectLeague.selectedOptions[0].getAttribute('id');
 
-    const standings = await standingsResponse.json();
-
-    displayStandingsToUI(standings.data.standings)
+       const standingsResponse = await fetch(`https://api-football-standings.azharimm.site/leagues/${leagueID}/standings?season=${+season.value}&sort=asc`);
+       const standings = await standingsResponse.json();
+       displayStandingsToUI(standings)
+    } else {
+        errorMessage.style.display = 'block';
+        clearMessage();
+    }
 }
 
 function displayStandingsToUI(standings) {
-    standings.forEach(item => {
+
+    document.querySelector('#standings-title').innerHTML = `
+        <p>${standings.data.name}</p>
+        <p>${standings.data.seasonDisplay}</p>
+    `;
+
+    standings.data.standings.forEach(item => {
         document.querySelector('tbody').innerHTML += `
         <tr class="team"> 
              <td>${item.team.name}</td> 
@@ -34,4 +44,6 @@ function displayStandingsToUI(standings) {
 }
 
 
-
+function clearMessage() {
+    setTimeout(() => errorMessage.remove(),2000)
+}

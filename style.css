@@ -7,18 +7,30 @@
 }
 
 body {
-    font-family: 'Raleway', sans-serif;;
+    font-family: 'Raleway', sans-serif;
+    background: url(background.jpg) no-repeat center/cover;
+    height: 207vh;
 }
 
 #main-header {
     text-align: center;
     padding: 20px 0;
     margin-bottom: 30px;
+    color: #fff;
 }
 
 #form-wrapper {
     max-width: 400px;
-    margin: auto;
+    margin:0 auto 20px;
+}
+
+#error-message {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 30px;
+    background-color: #f50b0b;
+    color: #fff;
+    display: none;
 }
 
 #league {
@@ -33,17 +45,18 @@ input {
     margin-bottom: 20px;
     width: 100%;
     border-radius: 5px;
-    box-shadow: 1px 3px 4px 4px rgba(8, 70, 241, 0.3);
+    /* box-shadow: 1px 3px 4px 4px rgba(8, 70, 241, 0.3); */
 }
 
 #btn {
+    cursor: pointer;
     border: 0;
     outline: 0;
     padding: 10px;
     background-color: #2119e9;
     color: #fff;
     border-radius: 5px;
-    box-shadow: 1px 3px 4px 4px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 1px 3px 4px 4px rgba(0, 0, 0, 0.2); */
 }
 
 #btn:focus {
@@ -54,6 +67,22 @@ input {
     max-width: 500px;
     margin: 0 auto;
     padding: 30px;
+}
+
+#standings-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#standings-title p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#standings-title p:first-child {
+    margin-right: 30px;
 }
 
 table {
