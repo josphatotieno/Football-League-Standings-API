@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;;
+}
+
+#main-header {
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+#form-wrapper {
+    max-width: 400px;
+    margin: auto;
+}
+
+#league,
+select {
+    margin-bottom: 20px;
+}
+
+select,
+input {
+    border: 0;
+    outline: 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 1px 3px 4px 4px rgba(8, 70, 241, 0.3);
+}
+
