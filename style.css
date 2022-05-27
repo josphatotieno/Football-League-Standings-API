@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    background: url(background.jpg) no-repeat center/cover;
+    background: url(background.jpg) no-repeat fixed center/cover;
     height: 207vh;
 }
 
@@ -17,6 +17,14 @@ body {
     padding: 20px 0;
     margin-bottom: 30px;
     color: #fff;
+}
+
+#main-header h1 {
+    font-size: 40px;
+    font-weight: bolder;
+    background: linear-gradient(#fff, 90%, #0d42ee);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #form-wrapper {
@@ -76,7 +84,7 @@ input {
 }
 
 #standings-title p {
-    font-size: 30px;
+    font-size: 29px;
     font-weight: bold;
     color: #fff;
 }
@@ -128,13 +136,21 @@ td {
 }
 
 @media (max-width: 500px) {
+    #main-header h1 {
+        font-size: 20px;
+    }
+
+    #form-wrapper {
+        margin-bottom: 50px;
+    }
+
     #form-wrapper,
     #standings-wrapper {
         padding: 0 10px;
     }
 
     #standings-title p {
-        font-size: 20px
+        font-size: 17px
     }
 
     .not-in-mobile {
