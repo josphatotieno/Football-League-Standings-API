@@ -64,7 +64,7 @@ input {
 }
 
 #standings-wrapper {
-    max-width: 500px;
+    max-width: 550px;
     margin: 0 auto;
     padding: 30px;
 }
@@ -76,7 +76,7 @@ input {
 }
 
 #standings-title p {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
     color: #fff;
 }
@@ -88,6 +88,14 @@ input {
 table {
     border-collapse: collapse;
     box-shadow: 1px 3px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(157, 158, 158);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(213, 214, 214);
 }
 
 thead tr {
@@ -104,11 +112,32 @@ td {
     padding: 10px;
 }
 
-tbody tr:nth-child(odd) {
-    background-color: rgb(157, 158, 158);
+.team td:first-child {
+    display: flex;
 }
 
-tbody tr:nth-child(even) {
-    background-color: rgb(213, 214, 214);
+.position,
+.logo {
+    margin-right: 5px;
 }
 
+.logo {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+@media (max-width: 500px) {
+    #form-wrapper,
+    #standings-wrapper {
+        padding: 0 10px;
+    }
+
+    #standings-title p {
+        font-size: 20px
+    }
+
+    .not-in-mobile {
+        display: none;
+    }
+}

@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Top 5 European Football League Standings</title>
+    <title>Top European Football League Standings</title>
 </head>
 <body>
     <header>
         <div id="main-header">
-            <h1>European Football League Standings</h1>
+            <h1>Football League Standings API</h1>
         </div>
     </header>
 
@@ -28,6 +28,9 @@
                         <option value="La Liga" id="esp.1">La Liga</option>
                         <option value="Serie A" id="ita.1">Serie A</option>
                         <option value="Ligue 1" id="fra.1">Ligue 1</option>
+                        <option value="Ligue 1" id="rus.1">Russian Premier League</option>
+                        <option value="Ligue 1" id="por.1">Portuguese Liga</option>
+                        <option value="Ligue 1" id="ned.1">Dutch Eredivisie</option>
                     </select>  
                 </div>
     
@@ -50,9 +53,9 @@
                         <tr>
                             <th>Team</th>
                             <th>P</th>
-                            <th>W</th>
-                            <th>D</th>
-                            <th>L</th>
+                            <th class="not-in-mobile">W</th>
+                            <th class="not-in-mobile">D</th>
+                            <th class="not-in-mobile">L</th>
                             <th>GD</th>
                             <th>PTS</th>
                         </tr>

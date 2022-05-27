@@ -28,18 +28,26 @@ function displayStandingsToUI(standings) {
         <p>${standings.data.seasonDisplay}</p>
     `;
 
-    standings.data.standings.forEach(item => {
+    standings.data.standings.forEach((item,index) => {
+
+        
         document.querySelector('tbody').innerHTML += `
         <tr class="team"> 
-             <td>${item.team.name}</td> 
+             <td>
+                <span class= 'position'>${index + 1}</span>
+                <img class= 'logo' src='${item.team.logos[0].href}' >
+                
+                ${item.team.name}
+             </td> 
              <td>${item.stats[3].value}</td> 
-             <td>${item.stats[0].value}</td> 
-             <td>${item.stats[2].value}</td> 
-             <td>${item.stats[1].value}</td> 
+             <td class="not-in-mobile">${item.stats[0].value}</td> 
+             <td class="not-in-mobile">${item.stats[2].value}</td> 
+             <td class="not-in-mobile">${item.stats[1].value}</td> 
              <td>${item.stats[9].value}</td> 
              <td>${item.stats[6].value}</td> 
         </tr>
     `;
+        
     });
 }
 
