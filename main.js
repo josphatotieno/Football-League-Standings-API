@@ -2,6 +2,7 @@ const selectLeague = document.querySelector('#select-league');
 const season = document.querySelector('#season');
 const btn = document.querySelector('#btn');
 const errorMessage = document.querySelector('#error-message');
+const standingsWrapper = document.querySelector('#standings-wrapper');
 
 btn.addEventListener('click', getStandings);
 
@@ -19,6 +20,8 @@ async function getStandings(e) {
         errorMessage.style.display = 'block';
         clearMessage();
     }
+
+    
 }
 
 function displayStandingsToUI(standings) {
@@ -49,9 +52,14 @@ function displayStandingsToUI(standings) {
     `;
         
     });
+
+    document.querySelector('#standings').style.display = 'block'
 }
 
 
 function clearMessage() {
     setTimeout(() => errorMessage.remove(),2000)
 }
+
+
+window.addEventListener('click', e => e.target == standingsWrapper ? standings.style.display = 'none' : false)
