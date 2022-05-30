@@ -8,8 +8,10 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    background: url(background.jpg) no-repeat fixed center/cover;
+    animation: backgroundChange 3s ease-in-out infinite 1s;
 }
+
+
 
 #main-header {
     text-align: center;
@@ -147,15 +149,13 @@ td {
     border-radius: 50%;
 }
 
-@keyframes fadeIn {
+@keyframes backgroundChange {
     from {
-        opacity: 0;
-        transform: scale(0);
-    }
+        background: url(stadium.jpg) no-repeat fixed center/cover;
+    } 
 
     to {
-        opacity: 1;
-        transform: scale(1);
+        background: url(background.jpg) no-repeat fixed center/cover;
     }
 }
 
