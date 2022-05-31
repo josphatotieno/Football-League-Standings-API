@@ -4,12 +4,13 @@
 
 <div align="center">
   <h3>
-    <a href="https://josphatotieno.github.io/Football-League-Standings-App/">
+    <a href="https://{josphatotieno.github.io/Football-League-Standings-App/}">
       Demo
     </a>
 
     <span> | </span>
-    <a href="https://github.com/josphatotieno/Football-League-Standings-App">
+
+    <a href="https://{github.com/josphatotieno/Football-League-Standings-App}">
       Code
     </a>
   </h3>
