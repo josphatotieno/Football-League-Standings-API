@@ -8,7 +8,8 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    animation: backgroundChange 3s ease-in-out infinite 1s;
+    background: url(stadium.jpg) no-repeat center/cover;
+    height: 100vh;
 }
 
 
@@ -147,16 +148,6 @@ td {
     height: 18px;
     width: 18px;
     border-radius: 50%;
-}
-
-@keyframes backgroundChange {
-    from {
-        background: url(stadium.jpg) no-repeat fixed center/cover;
-    } 
-
-    to {
-        background: url(background.jpg) no-repeat fixed center/cover;
-    }
 }
 
 @media (max-width: 500px) {
