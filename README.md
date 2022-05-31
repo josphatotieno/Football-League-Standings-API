@@ -29,7 +29,7 @@
 
 ## Overview
 
-![screenshot](https://github.com/josphatotieno/Web-Development-Resources/blob/main/stadium.jpg)
+![screenshot](https://github.com/josphatotieno/Web-Development-Resources/blob/main/Football%20League%20API.png)
 
 - This is a Football League Standings App built with <a href="https://api-football-standings.azharimm.site/leagues">Football Standings Api</a> where users select 
 a league from the provided list and the season they are interested to know how the standings was. The fetched data fro the api is displayed to the user as a modal with the requested standings.
