@@ -14,10 +14,13 @@ async function getStandings(e) {
         const leagueID = selectLeague.selectedOptions[0].getAttribute('id');
 
        const standingsResponse = await fetch(`https://api-football-standings.azharimm.site/leagues/${leagueID}/standings?season=${+season.value}&sort=asc`);
+
        const standings = await standingsResponse.json();
+
        displayStandingsToUI(standings)
     } else {
         errorMessage.style.display = 'block';
+        
         clearMessage();
     }
 
